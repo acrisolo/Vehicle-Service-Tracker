@@ -14,6 +14,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func AddVehicle(_ sender: UIButton) {
+    
+        let vc = UIViewController()
+        vc.view.backgroundColor = .red
+        
+        navigationController?.pushViewController(vc, animated: true)
+    
+    }
+    
 
+    
+    
 }
 

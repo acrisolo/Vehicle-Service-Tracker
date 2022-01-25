@@ -1,24 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KKX-tl-BsX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Vehicles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Vehicle_Service_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99917727710000004" green="0.83478528259999996" blue="0.13947835559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Vehicles" id="vXV-iG-LEJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-717" y="1817"/>
+        </scene>
+        <!--Add Vehicles-->
+        <scene sceneID="FoC-nF-SRq">
+            <objects>
+                <viewController id="neI-iq-Dql" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4LB-fK-43h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L7w-ad-4BY">
+                                <rect key="frame" x="157" y="432.5" width="100.5" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G0-cO-AcI">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add Vehicle"/>
+                                        <connections>
+                                            <action selector="AddVehicle:" destination="CZY-bg-n05" eventType="touchUpInside" id="8SI-OD-LNr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pZ7-cS-C7U"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="L7w-ad-4BY" firstAttribute="centerX" secondItem="4LB-fK-43h" secondAttribute="centerX" id="Akz-Tv-ZE2"/>
+                            <constraint firstItem="L7w-ad-4BY" firstAttribute="centerY" secondItem="4LB-fK-43h" secondAttribute="centerY" id="O5K-Tp-9Hv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Vehicles" id="1jP-30-1g2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OT-g8-us2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CZY-bg-n05" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="210.1449275362319" y="1827.4553571428571"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="p8S-pk-cf5">
+            <objects>
+                <viewController id="1NU-Bi-tQj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aOU-9W-KT4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nx4-QT-ALr"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="ZCH-qC-TQ0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbg-VP-y2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1168" y="1823"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Z36-sb-5hb">
+            <objects>
+                <tabBarController id="KKX-tl-BsX" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RXb-Cg-jHl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="linkColor"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YlM-7o-7Bk" kind="relationship" relationship="viewControllers" id="gjI-rE-7Ws"/>
+                        <segue destination="uM1-at-421" kind="relationship" relationship="viewControllers" id="KfC-2c-5Tn"/>
+                        <segue destination="suH-8X-BbU" kind="relationship" relationship="viewControllers" id="RzY-0i-a6i"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAS-92-7Y9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="404"/>
+        </scene>
+        <!--Vehicles-->
+        <scene sceneID="YhB-1J-0Rg">
+            <objects>
+                <navigationController id="YlM-7o-7Bk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Vehicles" image="car" catalog="system" id="bUe-w9-qbR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bkY-b1-mFt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9aE-Tx-cnj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Otz-BO-gjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-696" y="1102"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="qMO-Tk-AVZ">
+            <objects>
+                <navigationController id="suH-8X-BbU" userLabel="Settings" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="Lej-yo-ln9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QtO-m6-c0h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1NU-Bi-tQj" kind="relationship" relationship="rootViewController" id="Tre-mR-cZv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oK-1M-7pU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="1102"/>
+        </scene>
+        <!--Add Vehicle-->
+        <scene sceneID="4Qf-ml-Uoh">
+            <objects>
+                <navigationController id="uM1-at-421" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Vehicle" image="plus" catalog="system" id="Xlc-uM-4bL"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jby-Dj-Bhj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="neI-iq-Dql" kind="relationship" relationship="rootViewController" id="tr0-zN-kUh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbR-vH-CjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="1102"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="car" catalog="system" width="128" height="93"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
