@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KKX-tl-BsX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,36 +28,90 @@
         <!--Add Vehicles-->
         <scene sceneID="FoC-nF-SRq">
             <objects>
-                <viewController id="neI-iq-Dql" sceneMemberID="viewController">
+                <viewController id="neI-iq-Dql" customClass="ViewController" customModule="Vehicle_Service_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4LB-fK-43h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L7w-ad-4BY">
-                                <rect key="frame" x="157" y="432.5" width="100.5" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PDL-Dj-skm">
+                                <rect key="frame" x="20" y="238" width="374" height="202"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G0-cO-AcI">
-                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Add Vehicle"/>
-                                        <connections>
-                                            <action selector="AddVehicle:" destination="CZY-bg-n05" eventType="touchUpInside" id="8SI-OD-LNr"/>
-                                        </connections>
-                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Vehicle Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-pJ-hUx">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Vehicle Make and Model" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4D-V4-lEV">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Purchase Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMY-qf-6Va">
+                                        <rect key="frame" x="0.0" y="84" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Total Miles" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5PY-rs-bdb">
+                                        <rect key="frame" x="0.0" y="126" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Date of Last Service" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Jc-Oa-gqY">
+                                        <rect key="frame" x="0.0" y="168" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-rP-mby">
+                                <rect key="frame" x="20" y="552" width="374" height="152"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="Lgd-v8-3qc"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-no-b7c">
+                                <rect key="frame" x="20" y="184" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterTapped:" destination="neI-iq-Dql" eventType="touchUpInside" id="DE3-en-Bv4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pZ7-cS-C7U"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" red="0.99917727710000004" green="0.83478528259999996" blue="0.13947835559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="L7w-ad-4BY" firstAttribute="centerX" secondItem="4LB-fK-43h" secondAttribute="centerX" id="Akz-Tv-ZE2"/>
-                            <constraint firstItem="L7w-ad-4BY" firstAttribute="centerY" secondItem="4LB-fK-43h" secondAttribute="centerY" id="O5K-Tp-9Hv"/>
+                            <constraint firstItem="PDL-Dj-skm" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="20" id="754-z0-cKu"/>
+                            <constraint firstItem="8a4-rP-mby" firstAttribute="trailing" secondItem="nYo-no-b7c" secondAttribute="trailing" id="A5K-2u-5tg"/>
+                            <constraint firstItem="8a4-rP-mby" firstAttribute="leading" secondItem="nYo-no-b7c" secondAttribute="leading" id="Mix-qb-nrg"/>
+                            <constraint firstItem="8a4-rP-mby" firstAttribute="leading" secondItem="PDL-Dj-skm" secondAttribute="leading" id="R4B-1M-s5G"/>
+                            <constraint firstItem="8a4-rP-mby" firstAttribute="trailing" secondItem="PDL-Dj-skm" secondAttribute="trailing" id="aKi-QB-zQT"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="trailing" secondItem="PDL-Dj-skm" secondAttribute="trailing" constant="20" id="mnV-pD-aoo"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="bottom" secondItem="nYo-no-b7c" secondAttribute="bottom" constant="598" id="nAJ-1W-opQ"/>
+                            <constraint firstItem="PDL-Dj-skm" firstAttribute="top" secondItem="pZ7-cS-C7U" secondAttribute="top" constant="150" id="qnq-Ml-X6g"/>
+                            <constraint firstItem="nYo-no-b7c" firstAttribute="top" secondItem="8a4-rP-mby" secondAttribute="bottom" constant="-520" id="vxh-wz-zPN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Vehicles" id="1jP-30-1g2"/>
+                    <connections>
+                        <outlet property="textView" destination="8a4-rP-mby" id="R00-Kg-OG7"/>
+                        <outlet property="vLastService" destination="5Jc-Oa-gqY" id="9X5-tf-FRT"/>
+                        <outlet property="vMakeModel" destination="E4D-V4-lEV" id="Rp4-qt-G75"/>
+                        <outlet property="vPurchaseDate" destination="sMY-qf-6Va" id="h49-kv-7Ay"/>
+                        <outlet property="vTotalMiles" destination="5PY-rs-bdb" id="eRN-Qy-MAz"/>
+                        <outlet property="vYear" destination="ueo-pJ-hUx" id="YrK-t4-9eY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OT-g8-us2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="CZY-bg-n05" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="210.1449275362319" y="1827.4553571428571"/>
         </scene>
@@ -163,11 +217,17 @@
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
