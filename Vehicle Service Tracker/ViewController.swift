@@ -43,11 +43,13 @@ class ViewController: UIViewController {
     }
     
     private func configureTextFields(){
-        //vYear.delegate = self
-        //vMakeModel.delegate = self
-        //vPurchaseDate.delegate = self
-        //vTotalMiles.delegate = self
-        //vLastService.delegate = self
+        if (vYear != nil) {
+            vYear.delegate = self
+            vMakeModel.delegate = self
+            vPurchaseDate.delegate = self
+            vTotalMiles.delegate = self
+            vLastService.delegate = self
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
