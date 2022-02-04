@@ -10,21 +10,32 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var vYear: UITextField!
-    
     @IBOutlet weak var vMakeModel: UITextField!
-    
     @IBOutlet weak var vPurchaseDate: UITextField!
-    
     @IBOutlet weak var vTotalMiles: UITextField!
-    
     @IBOutlet weak var vLastService: UITextField!
-    
     @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var button: UIButton!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
+        if (imageView != nil) {
+        imageView.backgroundColor = .secondarySystemBackground
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func didTapButton(){
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        present(picker, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,3 +83,18 @@ extension ViewController : UITextFieldDelegate {
     }
 }
 
+extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
+            return
+        }
+        imageView.image = image
+    }
+    
+}

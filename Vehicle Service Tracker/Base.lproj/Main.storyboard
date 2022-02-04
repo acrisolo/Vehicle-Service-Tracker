@@ -33,8 +33,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-rP-mby">
+                                <rect key="frame" x="20" y="630" width="374" height="152"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="Lgd-v8-3qc"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-no-b7c">
+                                <rect key="frame" x="20" y="581" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterTapped:" destination="neI-iq-Dql" eventType="touchUpInside" id="DE3-en-Bv4"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kMm-Mp-9C2">
+                                <rect key="frame" x="33" y="712" width="120.5" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PDL-Dj-skm">
-                                <rect key="frame" x="20" y="238" width="374" height="202"/>
+                                <rect key="frame" x="20" y="118" width="374" height="202"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Vehicle Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-pJ-hUx">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -63,46 +90,52 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-rP-mby">
-                                <rect key="frame" x="20" y="552" width="374" height="152"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="Lgd-v8-3qc"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-no-b7c">
-                                <rect key="frame" x="20" y="184" width="374" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Enter">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="enterTapped:" destination="neI-iq-Dql" eventType="touchUpInside" id="DE3-en-Bv4"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Haa-9x-eOZ">
+                                <rect key="frame" x="46" y="389" width="322" height="118"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgK-Tp-xaP">
+                                        <rect key="frame" x="0.0" y="43.5" width="120.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Vehicle Picture">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="s2c-oJ-EJW"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-mV-vZx">
+                                        <rect key="frame" x="128.5" y="0.0" width="193.5" height="118"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pZ7-cS-C7U"/>
                         <color key="backgroundColor" red="0.99917727710000004" green="0.83478528259999996" blue="0.13947835559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PDL-Dj-skm" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="20" id="754-z0-cKu"/>
-                            <constraint firstItem="8a4-rP-mby" firstAttribute="trailing" secondItem="nYo-no-b7c" secondAttribute="trailing" id="A5K-2u-5tg"/>
-                            <constraint firstItem="8a4-rP-mby" firstAttribute="leading" secondItem="nYo-no-b7c" secondAttribute="leading" id="Mix-qb-nrg"/>
-                            <constraint firstItem="8a4-rP-mby" firstAttribute="leading" secondItem="PDL-Dj-skm" secondAttribute="leading" id="R4B-1M-s5G"/>
-                            <constraint firstItem="8a4-rP-mby" firstAttribute="trailing" secondItem="PDL-Dj-skm" secondAttribute="trailing" id="aKi-QB-zQT"/>
-                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="trailing" secondItem="PDL-Dj-skm" secondAttribute="trailing" constant="20" id="mnV-pD-aoo"/>
-                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="bottom" secondItem="nYo-no-b7c" secondAttribute="bottom" constant="598" id="nAJ-1W-opQ"/>
-                            <constraint firstItem="PDL-Dj-skm" firstAttribute="top" secondItem="pZ7-cS-C7U" secondAttribute="top" constant="150" id="qnq-Ml-X6g"/>
-                            <constraint firstItem="nYo-no-b7c" firstAttribute="top" secondItem="8a4-rP-mby" secondAttribute="bottom" constant="-520" id="vxh-wz-zPN"/>
+                            <constraint firstItem="PDL-Dj-skm" firstAttribute="top" secondItem="pZ7-cS-C7U" secondAttribute="top" constant="30" id="9vW-QT-VAI"/>
+                            <constraint firstItem="Haa-9x-eOZ" firstAttribute="top" secondItem="PDL-Dj-skm" secondAttribute="bottom" constant="69" id="Hz4-E2-nWg"/>
+                            <constraint firstItem="nYo-no-b7c" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="20" id="QmY-Dd-PYm"/>
+                            <constraint firstItem="8a4-rP-mby" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="20" id="RSh-s7-AwR"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="trailing" secondItem="8a4-rP-mby" secondAttribute="trailing" constant="20" id="SSy-Qp-IpP"/>
+                            <constraint firstItem="nYo-no-b7c" firstAttribute="top" secondItem="Haa-9x-eOZ" secondAttribute="bottom" constant="74" id="U0q-P9-rsc"/>
+                            <constraint firstItem="PDL-Dj-skm" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="20" id="UsV-Dl-3LQ"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="bottom" secondItem="8a4-rP-mby" secondAttribute="bottom" constant="31" id="asZ-vB-7h3"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="trailing" secondItem="nYo-no-b7c" secondAttribute="trailing" constant="20" id="cya-z4-yGy"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="trailing" secondItem="PDL-Dj-skm" secondAttribute="trailing" constant="20" id="dfV-vY-Upg"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="trailing" secondItem="Haa-9x-eOZ" secondAttribute="trailing" constant="46" id="gce-9s-DsX"/>
+                            <constraint firstItem="nYo-no-b7c" firstAttribute="top" secondItem="Haa-9x-eOZ" secondAttribute="bottom" constant="74" id="gnr-yu-HmG"/>
+                            <constraint firstItem="8a4-rP-mby" firstAttribute="top" secondItem="nYo-no-b7c" secondAttribute="bottom" constant="18" id="jM5-Id-Ksb"/>
+                            <constraint firstItem="Haa-9x-eOZ" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="46" id="sNO-dC-Gg4"/>
+                            <constraint firstItem="8a4-rP-mby" firstAttribute="top" secondItem="nYo-no-b7c" secondAttribute="bottom" constant="18" id="wFc-KP-SOe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Vehicles" id="1jP-30-1g2"/>
                     <connections>
+                        <outlet property="button" destination="tgK-Tp-xaP" id="Rgb-fF-hBP"/>
+                        <outlet property="imageView" destination="vBc-mV-vZx" id="qHc-zP-N9Z"/>
                         <outlet property="textView" destination="8a4-rP-mby" id="R00-Kg-OG7"/>
                         <outlet property="vLastService" destination="5Jc-Oa-gqY" id="9X5-tf-FRT"/>
                         <outlet property="vMakeModel" destination="E4D-V4-lEV" id="Rp4-qt-G75"/>
