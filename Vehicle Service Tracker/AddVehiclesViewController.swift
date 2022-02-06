@@ -1,5 +1,6 @@
 //
-//  ViewController.swift
+//  Formerly ViewController.swift
+//  For the AddVehicles Display Pane
 //  Vehicle Service Tracker
 //
 //  Created by Alan Crisologo on 1/17/22.
@@ -7,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddVehiclesViewController: UIViewController {
 
     @IBOutlet weak var vYear: UITextField!
     @IBOutlet weak var vMakeModel: UITextField!
@@ -19,21 +20,22 @@ class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var button: UIButton!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
         if (imageView != nil) {
         imageView.backgroundColor = .secondarySystemBackground
         }
+        
+        //dateWheelKeyboard file
+        createDatePicker()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func didTapButton(){
         let picker = UIImagePickerController()
         picker.sourceType = .camera
+        picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
     }
@@ -44,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     private func configureTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddVehiclesViewController.handleTap))
         view.addGestureRecognizer(tapGesture)
     }
     
@@ -73,9 +75,15 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    //Add functionality of a date picker keyboard vPurchaseDate
+    let datePickerPurchase = UIDatePicker()
+    
+    //Add functionality of a date picker keyboard vLastService
+    let datePickerService = UIDatePicker()
+    
 }
 
-extension ViewController : UITextFieldDelegate {
+extension AddVehiclesViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -83,7 +91,7 @@ extension ViewController : UITextFieldDelegate {
     }
 }
 
-extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddVehiclesViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
@@ -91,7 +99,7 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         picker.dismiss(animated: true, completion: nil)
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
             return
         }
         imageView.image = image
