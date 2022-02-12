@@ -9,7 +9,7 @@
 import UIKit
 
 class AddVehiclesViewController: UIViewController {
-
+    
     @IBOutlet weak var vYear: UITextField!
     @IBOutlet weak var vMakeModel: UITextField!
     @IBOutlet weak var vPurchaseDate: UITextField!
@@ -24,7 +24,7 @@ class AddVehiclesViewController: UIViewController {
         super.viewDidLoad()
         configureTextFields()
         if (imageView != nil) {
-        imageView.backgroundColor = .secondarySystemBackground
+            imageView.backgroundColor = .secondarySystemBackground
         }
         
         //dateWheelKeyboard file
