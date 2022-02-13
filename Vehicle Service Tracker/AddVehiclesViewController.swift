@@ -15,6 +15,8 @@ class AddVehiclesViewController: UIViewController {
     @IBOutlet weak var vPurchaseDate: UITextField!
     @IBOutlet weak var vTotalMiles: UITextField!
     @IBOutlet weak var vLastService: UITextField!
+    
+    
     @IBOutlet weak var textView: UITextView!
     
     @IBOutlet var imageView: UIImageView!

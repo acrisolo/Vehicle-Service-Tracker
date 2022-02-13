@@ -17,6 +17,10 @@
 		C3B67FA427962F65002191A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B67FA327962F65002191A7 /* Assets.xcassets */; };
 		C3B67FA727962F65002191A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B67FA527962F65002191A7 /* LaunchScreen.storyboard */; };
 		C3C03EBE27B85FD300F747BD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EBD27B85FD300F747BD /* CustomCell.swift */; };
+		C3C03EEF27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */; };
+		C3C03EF027B8A45E00F747BD /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */; };
+		C3C03EF127B8A45E00F747BD /* Vehicle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */; };
+		C3C03EF227B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EED27B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld */; };
 		C3D86EC827B186090075F07E /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86EC727B186090075F07E /* VideoDetailView.swift */; };
 		C3D86ECA27B186130075F07E /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86EC927B186130075F07E /* Video.swift */; };
 		C3D86ECC27B18D420075F07E /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86ECB27B18D420075F07E /* VideoListView.swift */; };
@@ -35,6 +39,10 @@
 		C3B67FA627962F65002191A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3B67FA827962F65002191A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C03EBD27B85FD300F747BD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C3C03EEE27B8A45E00F747BD /* savingData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = savingData.xcdatamodel; sourceTree = "<group>"; };
 		C3D86EC727B186090075F07E /* VideoDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
 		C3D86EC927B186130075F07E /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C3D86ECB27B18D420075F07E /* VideoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C3B67F9A27962F64002191A7 /* AppDelegate.swift */,
+				C3C03EF327B8A47600F747BD /* SaveData */,
 				C3B67F9C27962F64002191A7 /* SceneDelegate.swift */,
 				C3C03EBF27B867D300F747BD /* Vehicles Tab */,
 				C3B67F9E27962F64002191A7 /* AddVehiclesViewController.swift */,
@@ -102,6 +111,17 @@
 				C3D86EC927B186130075F07E /* Video.swift */,
 			);
 			path = "SwiftUI List";
+			sourceTree = "<group>";
+		};
+		C3C03EF327B8A47600F747BD /* SaveData */ = {
+			isa = PBXGroup;
+			children = (
+				C3C03EED27B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld */,
+				C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */,
+				C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */,
+				C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */,
+			);
+			path = SaveData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +196,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D86EC827B186090075F07E /* VideoDetailView.swift in Sources */,
+				C3C03EF027B8A45E00F747BD /* PersistenceService.swift in Sources */,
 				C3B67F9F27962F64002191A7 /* AddVehiclesViewController.swift in Sources */,
 				C3C03EBE27B85FD300F747BD /* CustomCell.swift in Sources */,
 				C3967E7B27AF873D004F4F9F /* VehiclesViewController.swift in Sources */,
 				C3B67F9B27962F64002191A7 /* AppDelegate.swift in Sources */,
 				C3967E7727AF7A51004F4F9F /* dateWheelKeyboard.swift in Sources */,
+				C3C03EEF27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift in Sources */,
+				C3C03EF127B8A45E00F747BD /* Vehicle+CoreDataClass.swift in Sources */,
+				C3C03EF227B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld in Sources */,
 				C3D86ECC27B18D420075F07E /* VideoListView.swift in Sources */,
 				C3D86ECA27B186130075F07E /* Video.swift in Sources */,
 				C3967E7927AF800B004F4F9F /* SettingsViewController.swift in Sources */,
@@ -408,6 +432,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3C03EED27B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3C03EEE27B8A45E00F747BD /* savingData.xcdatamodel */,
+			);
+			currentVersion = C3C03EEE27B8A45E00F747BD /* savingData.xcdatamodel */;
+			path = "Vehicle Service Tracker.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C3B67F8F27962F64002191A7 /* Project object */;
 }

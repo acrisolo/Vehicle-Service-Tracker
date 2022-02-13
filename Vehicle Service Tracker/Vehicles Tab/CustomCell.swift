@@ -11,6 +11,7 @@ class CustomCell: UITableViewCell {
 
     @IBOutlet weak var carView: UIView!
     @IBOutlet weak var carLabel: UILabel!
+    @IBOutlet weak var carYearLabel: UILabel!
     @IBOutlet weak var carImage: UIImageView!
     
     override func awakeFromNib() {

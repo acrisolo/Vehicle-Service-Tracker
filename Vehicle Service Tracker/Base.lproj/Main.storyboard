@@ -32,26 +32,36 @@
                                                     <rect key="frame" x="5" y="5" width="404" height="120"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRC-EQ-tdl">
-                                                            <rect key="frame" x="8" y="11.5" width="160" height="97"/>
+                                                            <rect key="frame" x="8" y="11.5" width="120" height="97"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="97" id="5Pb-SO-oz6"/>
-                                                                <constraint firstAttribute="width" constant="160" id="D4K-vm-v6N"/>
+                                                                <constraint firstAttribute="width" constant="120" id="D4K-vm-v6N"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhF-5n-uZH">
-                                                            <rect key="frame" x="183" y="11.5" width="213" height="97"/>
+                                                            <rect key="frame" x="136" y="11.5" width="260" height="97"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrd-Wq-g0u" userLabel="Year">
+                                                            <rect key="frame" x="136" y="78" width="260" height="32"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="HRC-EQ-tdl" firstAttribute="leading" secondItem="nK0-ym-MZn" secondAttribute="leading" constant="8" id="3sS-XB-7oK"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="mrd-Wq-g0u" secondAttribute="bottom" constant="2" id="724-jd-spO"/>
                                                         <constraint firstItem="HRC-EQ-tdl" firstAttribute="centerY" secondItem="nK0-ym-MZn" secondAttribute="centerY" id="7AO-OI-Wuy"/>
+                                                        <constraint firstItem="mrd-Wq-g0u" firstAttribute="leading" secondItem="HRC-EQ-tdl" secondAttribute="trailing" constant="8" id="8OD-xl-ebx"/>
                                                         <constraint firstItem="DhF-5n-uZH" firstAttribute="bottom" secondItem="HRC-EQ-tdl" secondAttribute="bottom" id="LiQ-W9-0Fh"/>
+                                                        <constraint firstItem="mrd-Wq-g0u" firstAttribute="trailing" secondItem="nK0-ym-MZn" secondAttribute="trailingMargin" id="Qsm-Yb-AnL"/>
                                                         <constraint firstAttribute="trailing" secondItem="DhF-5n-uZH" secondAttribute="trailing" constant="8" id="kUh-sZ-77l"/>
+                                                        <constraint firstItem="mrd-Wq-g0u" firstAttribute="top" secondItem="nK0-ym-MZn" secondAttribute="topMargin" constant="70" id="qYj-W9-5gC"/>
                                                         <constraint firstItem="DhF-5n-uZH" firstAttribute="top" secondItem="HRC-EQ-tdl" secondAttribute="top" id="uAq-OV-r7P"/>
-                                                        <constraint firstItem="DhF-5n-uZH" firstAttribute="leading" secondItem="HRC-EQ-tdl" secondAttribute="trailing" constant="15" id="yro-vg-B2S"/>
+                                                        <constraint firstItem="DhF-5n-uZH" firstAttribute="leading" secondItem="HRC-EQ-tdl" secondAttribute="trailing" constant="8" id="yro-vg-B2S"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -66,6 +76,7 @@
                                             <outlet property="carImage" destination="HRC-EQ-tdl" id="VeZ-fv-nIH"/>
                                             <outlet property="carLabel" destination="DhF-5n-uZH" id="5sg-xO-0wS"/>
                                             <outlet property="carView" destination="WAp-uX-qX4" id="Xl1-9w-Il7"/>
+                                            <outlet property="carYearLabel" destination="mrd-Wq-g0u" id="AuX-1b-pdW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -80,7 +91,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ERM-Bi-6cv" secondAttribute="trailing" id="soM-r2-yOs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Vehicles" id="vXV-iG-LEJ"/>
+                    <navigationItem key="navigationItem" title="Vehicles" id="vXV-iG-LEJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mEm-4v-XnF">
+                            <connections>
+                                <action selector="onPlusTapped" destination="BYZ-38-t0r" id="Ya8-dL-59T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ERM-Bi-6cv" id="uIE-8z-knP"/>
                     </connections>
