@@ -16,20 +16,18 @@ class VehiclesViewController: UIViewController {
     
     var vehicles = [Vehicle]() //new
     
-    //let carNames = [
-    //    "Honda",
-    //    "Chevy",
-    //    "Ford",
-     //   "Audi",
-     //   "BMW",
-    // old template, will delete
-    //]
+    let datePickerPurchase = UIDatePicker()
+    
+    //Add functionality of a date picker keyboard vLastService
+    let datePickerService = UIDatePicker()
     
     override func viewDidLoad() {
        super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+     //   createDatePicker()
         
         let fetchRequest: NSFetchRequest<Vehicle> = Vehicle.fetchRequest() //new
         
@@ -42,33 +40,59 @@ class VehiclesViewController: UIViewController {
         @IBAction func onPlusTapped(){
             let alert = UIAlertController(title: "Add Vehicle", message: nil, preferredStyle: .alert)
             alert.addTextField { (textField) in
-                textField.placeholder = "Vehicle Make/Model"
-                
+                textField.placeholder = "Make/Model"
             }
             alert.addTextField{ (textField) in
-                textField.placeholder = "Vehicle Year"
+                textField.placeholder = "Year"
                 textField.keyboardType = .numberPad
-                
+            }
+            alert.addTextField{ (textField) in
+                textField.placeholder = "Purchase Date"
+              //input dateKeyboard
+            }
+            alert.addTextField{ (textField) in
+                textField.placeholder = "Total Miles"
+                textField.keyboardType = .numberPad
+            }
+            alert.addTextField{ (textField) in
+                textField.placeholder = "Last Service Date"
             }
             let action = UIAlertAction(title: "Save", style: .default) { (_) in
                 let vehicle = alert.textFields!.first!.text!
-                let year = alert.textFields!.last!.text!
+                let year = alert.textFields![1].text!
+                let vPurchaseDate = alert.textFields![2].text!
+                let vTotalMiles = alert.textFields![3].text!
+                let vLastService = alert.textFields!.last!.text!
                 print(vehicle)
                 print(year)
+                print(vPurchaseDate)
+                print(vTotalMiles)
+                print(vLastService)
                 let vehicleSaved = Vehicle(context: PersistenceService.context)
                 vehicleSaved.makeModel = vehicle
                 vehicleSaved.year = Int16(year)!
+                vehicleSaved.purchaseDate = vPurchaseDate
+                vehicleSaved.totalMiles = Int16(vTotalMiles)!
+                vehicleSaved.lastServiceDate = vLastService
                 PersistenceService.saveContext()
                 self.vehicles.append(vehicleSaved)
                 self.tableView.reloadData()
             }
+            
+            // Create Cancel button with action handlder
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+                print("Cancel button tapped")
+            }
+            
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
+            
+            alert.addAction(cancel)
         }
         
       //  let vc = UIHostingController(rootView: //VideoListView())
        // present(vc, animated: true)
-   
+    
 }
 
 extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource{

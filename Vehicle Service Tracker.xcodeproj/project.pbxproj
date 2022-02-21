@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3101BFA27BAC578006FBEAC /* dateKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3101BF927BAC578006FBEAC /* dateKeyboard.swift */; };
+		C3314C6727C3086E00CD0980 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3314C6627C3086E00CD0980 /* DetailViewController.swift */; };
 		C3967E7727AF7A51004F4F9F /* dateWheelKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7627AF7A51004F4F9F /* dateWheelKeyboard.swift */; };
 		C3967E7927AF800B004F4F9F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7827AF800B004F4F9F /* SettingsViewController.swift */; };
 		C3967E7B27AF873D004F4F9F /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3101BF927BAC578006FBEAC /* dateKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateKeyboard.swift; sourceTree = "<group>"; };
+		C3314C6627C3086E00CD0980 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C3967E7627AF7A51004F4F9F /* dateWheelKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateWheelKeyboard.swift; sourceTree = "<group>"; };
 		C3967E7827AF800B004F4F9F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */,
+				C3314C6627C3086E00CD0980 /* DetailViewController.swift */,
 				C3C03EBD27B85FD300F747BD /* CustomCell.swift */,
+				C3101BF927BAC578006FBEAC /* dateKeyboard.swift */,
 			);
 			path = "Vehicles Tab";
 			sourceTree = "<group>";
@@ -202,11 +208,13 @@
 				C3967E7B27AF873D004F4F9F /* VehiclesViewController.swift in Sources */,
 				C3B67F9B27962F64002191A7 /* AppDelegate.swift in Sources */,
 				C3967E7727AF7A51004F4F9F /* dateWheelKeyboard.swift in Sources */,
+				C3314C6727C3086E00CD0980 /* DetailViewController.swift in Sources */,
 				C3C03EEF27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift in Sources */,
 				C3C03EF127B8A45E00F747BD /* Vehicle+CoreDataClass.swift in Sources */,
 				C3C03EF227B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld in Sources */,
 				C3D86ECC27B18D420075F07E /* VideoListView.swift in Sources */,
 				C3D86ECA27B186130075F07E /* Video.swift in Sources */,
+				C3101BFA27BAC578006FBEAC /* dateKeyboard.swift in Sources */,
 				C3967E7927AF800B004F4F9F /* SettingsViewController.swift in Sources */,
 				C3B67F9D27962F64002191A7 /* SceneDelegate.swift in Sources */,
 			);
