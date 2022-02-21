@@ -18,7 +18,7 @@ class VehiclesViewController: UIViewController {
     
     let datePickerPurchase = UIDatePicker()
     
-    //Add functionality of a date picker keyboard vLastService
+    //Add functionality of a date picker keyboardvLastService
     let datePickerService = UIDatePicker()
     
     override func viewDidLoad() {
