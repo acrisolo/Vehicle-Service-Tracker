@@ -58,6 +58,7 @@ class VehiclesViewController: UIViewController {
                 textField.placeholder = "Last Service Date"
             }
             let action = UIAlertAction(title: "Save", style: .default) { (_) in
+                
                 let vehicle = alert.textFields!.first!.text!
                 let year = alert.textFields![1].text!
                 let vPurchaseDate = alert.textFields![2].text!
