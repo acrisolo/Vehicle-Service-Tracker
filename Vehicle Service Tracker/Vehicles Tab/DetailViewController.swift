@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
 
     var titleText: String?
     
-    // MARK: - IBOutlets
+    // MARK: - IBOutlets section
     
     @IBOutlet weak var titleLabel: UILabel!
     
