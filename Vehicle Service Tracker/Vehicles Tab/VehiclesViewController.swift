@@ -58,7 +58,6 @@ class VehiclesViewController: UIViewController {
                 textField.placeholder = "Last Service Date"
             }
             let action = UIAlertAction(title: "Save", style: .default) { (_) in
-                
                 let vehicle = alert.textFields!.first!.text!
                 let year = alert.textFields![1].text!
                 let vPurchaseDate = alert.textFields![2].text!
@@ -126,4 +125,16 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+
+// MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailSegue"{
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destVC = segue.destination as! DetailViewController
+                destVC.titleText = vehicles[indexPath.row].makeModel
+            }
+        }
+    }
+    
 }

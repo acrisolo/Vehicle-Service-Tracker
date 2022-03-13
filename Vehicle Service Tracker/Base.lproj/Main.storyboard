@@ -77,14 +77,14 @@
                                             <outlet property="carLabel" destination="DhF-5n-uZH" id="5sg-xO-0wS"/>
                                             <outlet property="carView" destination="WAp-uX-qX4" id="Xl1-9w-Il7"/>
                                             <outlet property="carYearLabel" destination="mrd-Wq-g0u" id="AuX-1b-pdW"/>
-                                            <segue destination="d1s-ic-pyq" kind="show" id="3zh-7J-d4a"/>
+                                            <segue destination="d1s-ic-pyq" kind="show" identifier="toDetailSegue" id="3zh-7J-d4a"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.99917727710000004" green="0.83478528259999996" blue="0.13947835559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ERM-Bi-6cv" secondAttribute="bottom" id="9HG-MM-ZAT"/>
                             <constraint firstItem="ERM-Bi-6cv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jqG-c5-ngz"/>
@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-717.39130434782612" y="1816.7410714285713"/>
+            <point key="canvasLocation" x="-1184" y="1823"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="u4T-jQ-9nc">
@@ -114,14 +114,41 @@
                     <view key="view" contentMode="scaleToFill" id="dzk-nH-oYR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-a3-Kkd">
+                                <rect key="frame" x="111.5" y="109" width="191" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ePb-if-ewW">
+                                <rect key="frame" x="20" y="200" width="374" height="593"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="P62-oG-2xn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vXK-a3-Kkd" firstAttribute="top" secondItem="P62-oG-2xn" secondAttribute="top" constant="21" id="7Pd-Yj-fjO"/>
+                            <constraint firstItem="ePb-if-ewW" firstAttribute="top" secondItem="vXK-a3-Kkd" secondAttribute="bottom" constant="43" id="MXz-Bd-0H0"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="ePb-if-ewW" secondAttribute="trailing" constant="20" id="Mc8-mb-Y9L"/>
+                            <constraint firstItem="ePb-if-ewW" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="kLC-pH-z8X"/>
+                            <constraint firstItem="vXK-a3-Kkd" firstAttribute="centerX" secondItem="dzk-nH-oYR" secondAttribute="centerX" id="qp7-gA-bLX"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="bottom" secondItem="ePb-if-ewW" secondAttribute="bottom" constant="20" id="rUZ-VL-wRd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YPQ-Te-p8L"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="vXK-a3-Kkd" id="NUS-eR-qsl"/>
+                        <outlet property="vehicleDetailSpecs" destination="ePb-if-ewW" id="CCz-lN-hOc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tm3-0F-lcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1330" y="1817"/>
+            <point key="canvasLocation" x="-557.97101449275362" y="1822.7678571428571"/>
         </scene>
         <!--Add Vehicles-->
         <scene sceneID="FoC-nF-SRq">
@@ -209,7 +236,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pZ7-cS-C7U"/>
-                        <color key="backgroundColor" red="0.99917727710000004" green="0.83478528259999996" blue="0.13947835559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PDL-Dj-skm" firstAttribute="top" secondItem="pZ7-cS-C7U" secondAttribute="top" constant="30" id="9vW-QT-VAI"/>
                             <constraint firstItem="PDL-Dj-skm" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="20" id="UsV-Dl-3LQ"/>

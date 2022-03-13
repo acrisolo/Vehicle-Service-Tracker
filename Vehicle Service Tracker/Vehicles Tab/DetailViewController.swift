@@ -6,9 +6,29 @@
 //
 
 import UIKit
+import CoreData
+
 
 class DetailViewController: UIViewController {
 
+    var titleText: String?
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var vehicleDetailSpecs: UITextView!
+    
+    // MARK: - View Lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let titleText = titleText {
+            titleLabel.text = titleText
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,3 +47,4 @@ class DetailViewController: UIViewController {
     */
 
 }
+
