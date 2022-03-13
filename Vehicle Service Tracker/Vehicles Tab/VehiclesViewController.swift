@@ -126,7 +126,7 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
 
-// MARK: - Navigation
+// MARK: - Navigation section
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailSegue"{
