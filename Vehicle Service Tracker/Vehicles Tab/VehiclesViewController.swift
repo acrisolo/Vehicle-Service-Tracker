@@ -70,9 +70,11 @@ class VehiclesViewController: UIViewController {
                 print(vLastService)
                 let vehicleSaved = Vehicle(context: PersistenceService.context)
                 vehicleSaved.makeModel = vehicle
-                vehicleSaved.year = Int16(year)!
+                //vehicleSaved.year = Int16(year)! <- if using int16
+                vehicleSaved.year = year
                 vehicleSaved.purchaseDate = vPurchaseDate
-                vehicleSaved.totalMiles = Int16(vTotalMiles)!
+                //vehicleSaved.totalMiles = Int16(vTotalMiles)! <- if using int16
+                vehicleSaved.totalMiles = vTotalMiles
                 vehicleSaved.lastServiceDate = vLastService
                 PersistenceService.saveContext()
                 self.vehicles.append(vehicleSaved)
@@ -120,9 +122,9 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource{
         cell.carLabel.text = specificMakeModel?.capitalized
         
         let vehicleYear = vehicles[indexPath.row].year
-        cell.carYearLabel.text = "\(vehicleYear)"
+        cell.carYearLabel.text = vehicleYear
+        //cell.carYearLabel.text = "\(vehicleYear)" <-- if using int16
         //cell.textLabel?.text = carNames[indexPath.row]
-        
         return cell
     }
 
@@ -133,6 +135,10 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource{
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destVC = segue.destination as! DetailViewController
                 destVC.titleText = vehicles[indexPath.row].makeModel
+                destVC.carYear = vehicles[indexPath.row].year // check this
+                destVC.carTotalMiles = vehicles[indexPath.row].totalMiles
+                destVC.carPurchaseDate = vehicles[indexPath.row].purchaseDate
+                destVC.carLastServiceDate = vehicles[indexPath.row].lastServiceDate
             }
         }
     }

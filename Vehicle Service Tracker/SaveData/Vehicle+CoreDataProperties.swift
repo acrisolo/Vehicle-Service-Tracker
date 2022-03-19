@@ -17,9 +17,11 @@ extension Vehicle {
     }
 
     @NSManaged public var makeModel: String?
-    @NSManaged public var year: Int16
+    //@NSManaged public var year: Int16
+    @NSManaged public var year: String?
     @NSManaged public var purchaseDate: String?
-    @NSManaged public var totalMiles: Int16
+    //@NSManaged public var totalMiles: Int16
+    @NSManaged public var totalMiles: String?
     @NSManaged public var lastServiceDate: String?
 
 }
