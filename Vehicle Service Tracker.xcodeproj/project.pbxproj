@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C3101BFA27BAC578006FBEAC /* dateKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3101BF927BAC578006FBEAC /* dateKeyboard.swift */; };
 		C3314C6727C3086E00CD0980 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3314C6627C3086E00CD0980 /* DetailViewController.swift */; };
+		C380530427F2CA3B0007FB31 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380530327F2CA3B0007FB31 /* DataBaseHelper.swift */; };
 		C3967E7727AF7A51004F4F9F /* dateWheelKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7627AF7A51004F4F9F /* dateWheelKeyboard.swift */; };
 		C3967E7927AF800B004F4F9F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7827AF800B004F4F9F /* SettingsViewController.swift */; };
 		C3967E7B27AF873D004F4F9F /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		C3101BF927BAC578006FBEAC /* dateKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateKeyboard.swift; sourceTree = "<group>"; };
 		C3314C6627C3086E00CD0980 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C380530327F2CA3B0007FB31 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		C3967E7627AF7A51004F4F9F /* dateWheelKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateWheelKeyboard.swift; sourceTree = "<group>"; };
 		C3967E7827AF800B004F4F9F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C3314C6627C3086E00CD0980 /* DetailViewController.swift */,
 				C3C03EBD27B85FD300F747BD /* CustomCell.swift */,
 				C3101BF927BAC578006FBEAC /* dateKeyboard.swift */,
+				C380530327F2CA3B0007FB31 /* DataBaseHelper.swift */,
 			);
 			path = "Vehicles Tab";
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C380530427F2CA3B0007FB31 /* DataBaseHelper.swift in Sources */,
 				C3D86EC827B186090075F07E /* VideoDetailView.swift in Sources */,
 				C3C03EF027B8A45E00F747BD /* PersistenceService.swift in Sources */,
 				C3B67F9F27962F64002191A7 /* AddVehiclesViewController.swift in Sources */,

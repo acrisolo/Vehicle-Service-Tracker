@@ -7,7 +7,11 @@
         <attribute name="totalMiles" optional="YES" attributeType="String"/>
         <attribute name="year" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Vimage" representedClassName="Vimage" syncable="YES" codeGenerationType="class">
+        <attribute name="img" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+    </entity>
     <elements>
         <element name="Vehicle" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Vimage" positionX="-54" positionY="27" width="128" height="44"/>
     </elements>
 </model>

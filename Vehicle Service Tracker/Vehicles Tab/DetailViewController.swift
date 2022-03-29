@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     var latestGasPrice: Double?
     var carLastServiceDate: String?
     var milesAtServiceDate: Double?
+    var carImage: Data?
     
     // MARK: - IBOutlets section
     
@@ -75,16 +76,31 @@ class DetailViewController: UIViewController {
         present(picker, animated: true)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    class DataBaseHelper {
+    static let shareInstance = DataBaseHelper()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    func saveImage(data: Data) {
+    let imageInstance = Vimage(context: context)
+    imageInstance.img = data
+    do {
+    try context.save()
+    print("Image is saved")
+    } catch {
+    print(error.localizedDescription)
+          }
+       }
     }
-    */
+    
+    @IBAction func saveImageButtonPressed(_ sender: UIButton) {
+    if let imageData = imageView.image?.pngData() {
+    DataBaseHelper.shareInstance.saveImage(data: imageData)
+       }
+    }
+   // @IBAction func fetchImageButtonPressed(_ sender: UIButton) {
 
+   //         let arr = DataBaseHelper.shareInstance.fetchImage()
+   //         fetchImageView.image = UIImage(data: arr[0].img!)
+   //     }
 }
 
 extension DetailViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {

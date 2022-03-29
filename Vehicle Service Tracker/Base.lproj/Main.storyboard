@@ -201,15 +201,52 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-8x-HB9">
+                                <rect key="frame" x="20" y="723" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Picture">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterTapped:" destination="neI-iq-Dql" eventType="touchUpInside" id="g2T-5y-SQ2"/>
+                                    <action selector="saveImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="E2c-gC-aaJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agz-kU-eEX">
+                                <rect key="frame" x="279" y="88" width="115" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fetch Picture">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="3W0-Km-aEf"/>
+                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="tWg-mC-SlD"/>
+                                    <action selector="fetchImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="Dmg-rN-3l2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P62-oG-2xn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MUb-x0-nox" firstAttribute="top" secondItem="agz-kU-eEX" secondAttribute="bottom" constant="62" id="4I8-KT-lAH"/>
                             <constraint firstItem="vXK-a3-Kkd" firstAttribute="top" secondItem="P62-oG-2xn" secondAttribute="top" constant="21" id="7Pd-Yj-fjO"/>
+                            <constraint firstItem="agz-kU-eEX" firstAttribute="top" secondItem="P62-oG-2xn" secondAttribute="top" id="Dqc-af-Wc2"/>
+                            <constraint firstItem="hMc-8x-HB9" firstAttribute="top" secondItem="MUb-x0-nox" secondAttribute="bottom" constant="8" id="JQk-bg-HfY"/>
                             <constraint firstItem="P62-oG-2xn" firstAttribute="bottom" secondItem="MUb-x0-nox" secondAttribute="bottom" constant="98" id="KtB-jg-Xkw"/>
+                            <constraint firstItem="hMc-8x-HB9" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="Lxv-An-ve1"/>
                             <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="MUb-x0-nox" secondAttribute="trailing" constant="20" id="QRM-7U-lma"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="bottom" secondItem="hMc-8x-HB9" secondAttribute="bottom" constant="59" id="XIP-ua-dlI"/>
+                            <constraint firstItem="agz-kU-eEX" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="279" id="fVt-wh-FD5"/>
                             <constraint firstItem="MUb-x0-nox" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="hMF-r4-2Qf"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="hMc-8x-HB9" secondAttribute="trailing" constant="20" id="mxS-Hp-fmu"/>
                             <constraint firstItem="vXK-a3-Kkd" firstAttribute="centerX" secondItem="dzk-nH-oYR" secondAttribute="centerX" id="qp7-gA-bLX"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="agz-kU-eEX" secondAttribute="trailing" constant="20" id="quc-Fe-bFn"/>
                             <constraint firstItem="MUb-x0-nox" firstAttribute="top" secondItem="vXK-a3-Kkd" secondAttribute="bottom" constant="24" id="rnr-ce-azl"/>
                         </constraints>
                     </view>
