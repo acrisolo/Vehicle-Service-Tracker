@@ -9,32 +9,32 @@ import UIKit
 import CoreData
 
 class DataBaseHelper {
-
+    
     static let shareInstance = DataBaseHelper()
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func saveImage(data: Data) {
+        let imageInstance = Vimage(context: context)
+        imageInstance.img = data
         
-        func saveImage(data: Data) {
-            let imageInstance = Vimage(context: context)
-            imageInstance.img = data
-                
-            do {
-                try context.save()
-                print("Image is saved")
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        func fetchImage() -> [Vimage] {
-            var fetchingImage = [Vimage]()
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Vimage")
-            
-            do {
-                fetchingImage = try context.fetch(fetchRequest) as! [Vimage]
-            } catch {
-                print("Error while fetching the image")
-            }
-            
-            return fetchingImage
+        do {
+            try context.save()
+            print("Image is saved")
+        } catch {
+            print(error.localizedDescription)
         }
     }
+    
+    func fetchImage() -> [Vimage] {
+        var fetchingImage = [Vimage]()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Vimage")
+        
+        do {
+            fetchingImage = try context.fetch(fetchRequest) as! [Vimage]
+        } catch {
+            print("Error while fetching the image")
+        }
+        
+        return fetchingImage
+    }
+}

@@ -10,7 +10,7 @@ import CoreData
 
 
 class DetailViewController: UIViewController {
-
+    
     var titleText: String?
     var carYear: String?
     var carPurchaseDate: String?
@@ -56,6 +56,9 @@ class DetailViewController: UIViewController {
         if let carLastServiceDate = carLastServiceDate {
             lastServiceDateLabel.text = "Last Service Date: \(carLastServiceDate)"
         }
+        if let carImage = carImage {
+            imageView.image = UIImage(data: DataBaseHelper.shareInstance.fetchImage()[0].img!)
+        }
     }
     
     override func viewDidLoad() {
@@ -66,41 +69,25 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     @IBAction func didTapPicButton(){
         let picker = UIImagePickerController()
-       // picker.sourceType = .camera this is for using a picture taken from the camera
+        // picker.sourceType = .camera this is for using a picture taken from the camera
         picker.sourceType = .photoLibrary
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
     }
-
-    class DataBaseHelper {
-    static let shareInstance = DataBaseHelper()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    func saveImage(data: Data) {
-    let imageInstance = Vimage(context: context)
-    imageInstance.img = data
-    do {
-    try context.save()
-    print("Image is saved")
-    } catch {
-    print(error.localizedDescription)
-          }
-       }
-    }
     
     @IBAction func saveImageButtonPressed(_ sender: UIButton) {
-    if let imageData = imageView.image?.pngData() {
-    DataBaseHelper.shareInstance.saveImage(data: imageData)
-       }
+        if let imageData = imageView.image?.pngData() {
+            DataBaseHelper.shareInstance.saveImage(data: imageData)
+        }
     }
-   // @IBAction func fetchImageButtonPressed(_ sender: UIButton) {
-
-   //         let arr = DataBaseHelper.shareInstance.fetchImage()
-   //         fetchImageView.image = UIImage(data: arr[0].img!)
-   //     }
+    @IBAction func fetchImageButtonPressed(_ sender: UIButton) {
+        
+        let arr = DataBaseHelper.shareInstance.fetchImage()
+        imageView.image = UIImage(data: arr[0].img!)
+    }
 }
 
 extension DetailViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -115,6 +102,9 @@ extension DetailViewController : UIImagePickerControllerDelegate, UINavigationCo
             return
         }
         imageView.image = image
+        if let imageData = image.pngData() {
+            DataBaseHelper.shareInstance.saveImage(data: imageData)
+        }
     }
     
 }

@@ -116,155 +116,147 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-a3-Kkd">
-                                <rect key="frame" x="112" y="109" width="190.5" height="48"/>
+                                <rect key="frame" x="112" y="103" width="190.5" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-x0-nox">
-                                <rect key="frame" x="20" y="181" width="374" height="534"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-r2-QmA">
+                                <rect key="frame" x="20" y="159" width="374" height="423"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="K53-UU-5TG">
-                                        <rect key="frame" x="95" y="0.0" width="184" height="262"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGq-f7-ike">
+                                        <rect key="frame" x="170" y="0.0" width="34" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PurchaseDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6C-Yg-yGh">
+                                        <rect key="frame" x="133.5" y="49" width="107" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalMiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWw-YT-wLx">
+                                        <rect key="frame" x="148.5" y="98" width="77" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TirePSI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWv-Bz-Uka">
+                                        <rect key="frame" x="160" y="147" width="54" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MilesPerGallon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-DI-TnT">
+                                        <rect key="frame" x="130.5" y="196" width="113.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LatestGasPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="026-b5-8V4">
+                                        <rect key="frame" x="129.5" y="245" width="115.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastServiceDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF8-eb-Oag">
+                                        <rect key="frame" x="124.5" y="294" width="125" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MilesAtNextServiceDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpP-BI-Lsv">
+                                        <rect key="frame" x="95" y="343" width="184" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bw2-Yh-I41">
+                                        <rect key="frame" x="9.5" y="392" width="355" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8n-C9-m32">
-                                                <rect key="frame" x="75" y="0.0" width="34" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PurchaseDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-qf-Xio">
-                                                <rect key="frame" x="38.5" y="34.5" width="107" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalMiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-lh-uVS">
-                                                <rect key="frame" x="53.5" y="69" width="77" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TirePSI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnN-Pi-LCL">
-                                                <rect key="frame" x="65" y="103.5" width="54" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MilesPerGallon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ6-Vl-KOW">
-                                                <rect key="frame" x="35.5" y="138" width="113.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LatestGasPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELS-nE-D1P">
-                                                <rect key="frame" x="34.5" y="172.5" width="115.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastServiceDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYv-SC-sE3">
-                                                <rect key="frame" x="29.5" y="207" width="125" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MilesAtNextServiceDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8R-ky-gOq">
-                                                <rect key="frame" x="0.0" y="241.5" width="184" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="gBQ-z2-BQq">
-                                        <rect key="frame" x="62" y="279" width="250" height="255"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-tN-Zjg">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="210"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi9-iJ-671">
-                                                <rect key="frame" x="65" y="224" width="120.5" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUc-kW-5hy">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Vehicle Picture">
-                                                    <backgroundConfiguration key="background">
+                                                <buttonConfiguration key="configuration" style="plain" title="Choose Photo">
+                                                    <backgroundConfiguration key="background" strokeWidth="10">
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                     </backgroundConfiguration>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="i55-vs-Cqw"/>
-                                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="WhA-D8-aNC"/>
+                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="79Z-fG-lLm"/>
+                                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="JfL-ID-ciz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-2A-DKz">
+                                                <rect key="frame" x="120" y="0.0" width="115" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Save Photo">
+                                                    <backgroundConfiguration key="background" strokeWidth="10">
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="UeF-3i-XYO"/>
+                                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="XAL-Pw-2HF"/>
+                                                    <action selector="saveImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="kzv-V9-juS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6L8-sQ-jGW">
+                                                <rect key="frame" x="240" y="0.0" width="115" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Fetch Photo">
+                                                    <backgroundConfiguration key="background" strokeWidth="10">
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="qQL-N2-ecI"/>
+                                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="f1z-SR-tGy"/>
+                                                    <action selector="fetchImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="E38-pj-EKm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-8x-HB9">
-                                <rect key="frame" x="20" y="723" width="374" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save Picture">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="enterTapped:" destination="neI-iq-Dql" eventType="touchUpInside" id="g2T-5y-SQ2"/>
-                                    <action selector="saveImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="E2c-gC-aaJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agz-kU-eEX">
-                                <rect key="frame" x="279" y="88" width="115" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Fetch Picture">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="3W0-Km-aEf"/>
-                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="tWg-mC-SlD"/>
-                                    <action selector="fetchImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="Dmg-rN-3l2"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-d5-g39">
+                                <rect key="frame" x="20" y="587" width="374" height="218"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P62-oG-2xn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MUb-x0-nox" firstAttribute="top" secondItem="agz-kU-eEX" secondAttribute="bottom" constant="62" id="4I8-KT-lAH"/>
-                            <constraint firstItem="vXK-a3-Kkd" firstAttribute="top" secondItem="P62-oG-2xn" secondAttribute="top" constant="21" id="7Pd-Yj-fjO"/>
-                            <constraint firstItem="agz-kU-eEX" firstAttribute="top" secondItem="P62-oG-2xn" secondAttribute="top" id="Dqc-af-Wc2"/>
-                            <constraint firstItem="hMc-8x-HB9" firstAttribute="top" secondItem="MUb-x0-nox" secondAttribute="bottom" constant="8" id="JQk-bg-HfY"/>
-                            <constraint firstItem="P62-oG-2xn" firstAttribute="bottom" secondItem="MUb-x0-nox" secondAttribute="bottom" constant="98" id="KtB-jg-Xkw"/>
-                            <constraint firstItem="hMc-8x-HB9" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="Lxv-An-ve1"/>
-                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="MUb-x0-nox" secondAttribute="trailing" constant="20" id="QRM-7U-lma"/>
-                            <constraint firstItem="P62-oG-2xn" firstAttribute="bottom" secondItem="hMc-8x-HB9" secondAttribute="bottom" constant="59" id="XIP-ua-dlI"/>
-                            <constraint firstItem="agz-kU-eEX" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="279" id="fVt-wh-FD5"/>
-                            <constraint firstItem="MUb-x0-nox" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="hMF-r4-2Qf"/>
-                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="hMc-8x-HB9" secondAttribute="trailing" constant="20" id="mxS-Hp-fmu"/>
+                            <constraint firstItem="5bP-r2-QmA" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="Fuh-Zd-a2T"/>
+                            <constraint firstItem="vXK-a3-Kkd" firstAttribute="top" secondItem="P62-oG-2xn" secondAttribute="top" constant="15" id="J1c-zM-lxj"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="bottom" secondItem="fwU-d5-g39" secondAttribute="bottom" constant="8" id="Qfh-ug-0WN"/>
+                            <constraint firstItem="5bP-r2-QmA" firstAttribute="top" secondItem="vXK-a3-Kkd" secondAttribute="bottom" constant="8" id="SjD-Qn-qoe"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="5bP-r2-QmA" secondAttribute="trailing" constant="20" id="ZjY-nb-IfH"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="fwU-d5-g39" secondAttribute="trailing" constant="20" id="abE-JZ-LNP"/>
+                            <constraint firstItem="fwU-d5-g39" firstAttribute="top" secondItem="5bP-r2-QmA" secondAttribute="bottom" constant="5" id="fbV-VH-7MS"/>
+                            <constraint firstItem="fwU-d5-g39" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="kGm-Az-eKn"/>
                             <constraint firstItem="vXK-a3-Kkd" firstAttribute="centerX" secondItem="dzk-nH-oYR" secondAttribute="centerX" id="qp7-gA-bLX"/>
-                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="agz-kU-eEX" secondAttribute="trailing" constant="20" id="quc-Fe-bFn"/>
-                            <constraint firstItem="MUb-x0-nox" firstAttribute="top" secondItem="vXK-a3-Kkd" secondAttribute="bottom" constant="24" id="rnr-ce-azl"/>
+                            <constraint firstItem="fwU-d5-g39" firstAttribute="top" secondItem="vXK-a3-Kkd" secondAttribute="bottom" constant="436" id="wP2-4j-Xl8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YPQ-Te-p8L">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="BYc-xe-iqG"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="zzd-tN-Zjg" id="DFb-lz-wrC"/>
-                        <outlet property="lastServiceDateLabel" destination="gYv-SC-sE3" id="zKr-dz-Mqa"/>
-                        <outlet property="latestGasPriceLabel" destination="ELS-nE-D1P" id="9eS-Yd-TPR"/>
-                        <outlet property="milesAtNextServiceDateLabel" destination="P8R-ky-gOq" id="Mdf-Va-i7S"/>
-                        <outlet property="milesPerGallonLabel" destination="IZ6-Vl-KOW" id="XUm-HK-lQa"/>
-                        <outlet property="purchaseDateLabel" destination="0dv-qf-Xio" id="IEo-Bv-paI"/>
-                        <outlet property="tirePSILabel" destination="jnN-Pi-LCL" id="oV0-SV-RMK"/>
+                        <outlet property="imageView" destination="fwU-d5-g39" id="NCI-PP-qum"/>
+                        <outlet property="lastServiceDateLabel" destination="sF8-eb-Oag" id="N7h-6n-8SH"/>
+                        <outlet property="latestGasPriceLabel" destination="026-b5-8V4" id="42R-MD-JTf"/>
+                        <outlet property="milesAtNextServiceDateLabel" destination="fpP-BI-Lsv" id="me7-oP-XgP"/>
+                        <outlet property="milesPerGallonLabel" destination="dbj-DI-TnT" id="Edl-DG-2wE"/>
+                        <outlet property="purchaseDateLabel" destination="m6C-Yg-yGh" id="xzj-eZ-8kj"/>
+                        <outlet property="tirePSILabel" destination="YWv-Bz-Uka" id="OOZ-5o-37p"/>
                         <outlet property="titleLabel" destination="vXK-a3-Kkd" id="NUS-eR-qsl"/>
-                        <outlet property="totalMilesLabel" destination="fch-lh-uVS" id="raJ-qo-wCz"/>
-                        <outlet property="vehiclePicButton" destination="Fi9-iJ-671" id="Fbe-gV-MAi"/>
-                        <outlet property="yearLabel" destination="X8n-C9-m32" id="1N4-zr-Lkc"/>
+                        <outlet property="totalMilesLabel" destination="PWw-YT-wLx" id="g4t-dG-uPL"/>
+                        <outlet property="vehiclePicButton" destination="zUc-kW-5hy" id="cfm-d4-5MU"/>
+                        <outlet property="yearLabel" destination="CGq-f7-ike" id="fCx-pp-tnV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tm3-0F-lcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
