@@ -23,6 +23,7 @@ extension Vehicle {
     //@NSManaged public var totalMiles: Int16
     @NSManaged public var totalMiles: String?
     @NSManaged public var lastServiceDate: String?
+    @NSManaged public var carImage: Data?
 
 }
 
