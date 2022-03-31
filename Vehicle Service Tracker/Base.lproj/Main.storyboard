@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KKX-tl-BsX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KKX-tl-BsX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,59 +12,371 @@
         <!--Vehicles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Vehicle_Service_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vehiclesVC" id="BYZ-38-t0r" customClass="VehiclesViewController" customModule="Vehicle_Service_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ERM-Bi-6cv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customCell" rowHeight="120" id="mDl-Yv-qp2" customClass="CustomCell" customModule="Vehicle_Service_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mDl-Yv-qp2" id="WAp-uX-qX4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nK0-ym-MZn">
+                                                    <rect key="frame" x="5" y="5" width="404" height="120"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRC-EQ-tdl">
+                                                            <rect key="frame" x="8" y="11.5" width="120" height="97"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="97" id="5Pb-SO-oz6"/>
+                                                                <constraint firstAttribute="width" constant="120" id="D4K-vm-v6N"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhF-5n-uZH">
+                                                            <rect key="frame" x="136" y="11.5" width="260" height="97"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrd-Wq-g0u" userLabel="Year">
+                                                            <rect key="frame" x="136" y="78" width="260" height="32"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="HRC-EQ-tdl" firstAttribute="leading" secondItem="nK0-ym-MZn" secondAttribute="leading" constant="8" id="3sS-XB-7oK"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="mrd-Wq-g0u" secondAttribute="bottom" constant="2" id="724-jd-spO"/>
+                                                        <constraint firstItem="HRC-EQ-tdl" firstAttribute="centerY" secondItem="nK0-ym-MZn" secondAttribute="centerY" id="7AO-OI-Wuy"/>
+                                                        <constraint firstItem="mrd-Wq-g0u" firstAttribute="leading" secondItem="HRC-EQ-tdl" secondAttribute="trailing" constant="8" id="8OD-xl-ebx"/>
+                                                        <constraint firstItem="DhF-5n-uZH" firstAttribute="bottom" secondItem="HRC-EQ-tdl" secondAttribute="bottom" id="LiQ-W9-0Fh"/>
+                                                        <constraint firstItem="mrd-Wq-g0u" firstAttribute="trailing" secondItem="nK0-ym-MZn" secondAttribute="trailingMargin" id="Qsm-Yb-AnL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DhF-5n-uZH" secondAttribute="trailing" constant="8" id="kUh-sZ-77l"/>
+                                                        <constraint firstItem="mrd-Wq-g0u" firstAttribute="top" secondItem="nK0-ym-MZn" secondAttribute="topMargin" constant="70" id="qYj-W9-5gC"/>
+                                                        <constraint firstItem="DhF-5n-uZH" firstAttribute="top" secondItem="HRC-EQ-tdl" secondAttribute="top" id="uAq-OV-r7P"/>
+                                                        <constraint firstItem="DhF-5n-uZH" firstAttribute="leading" secondItem="HRC-EQ-tdl" secondAttribute="trailing" constant="8" id="yro-vg-B2S"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nK0-ym-MZn" firstAttribute="top" secondItem="WAp-uX-qX4" secondAttribute="top" constant="5" id="8J8-vL-HZo"/>
+                                                <constraint firstAttribute="bottom" secondItem="nK0-ym-MZn" secondAttribute="bottom" constant="-5" id="AU4-IN-boS"/>
+                                                <constraint firstAttribute="trailing" secondItem="nK0-ym-MZn" secondAttribute="trailing" constant="5" id="Du6-s1-oPk"/>
+                                                <constraint firstItem="nK0-ym-MZn" firstAttribute="leading" secondItem="WAp-uX-qX4" secondAttribute="leading" constant="5" id="dF6-ZJ-m52"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carImage" destination="HRC-EQ-tdl" id="VeZ-fv-nIH"/>
+                                            <outlet property="carLabel" destination="DhF-5n-uZH" id="5sg-xO-0wS"/>
+                                            <outlet property="carView" destination="WAp-uX-qX4" id="Xl1-9w-Il7"/>
+                                            <outlet property="carYearLabel" destination="mrd-Wq-g0u" id="AuX-1b-pdW"/>
+                                            <segue destination="d1s-ic-pyq" kind="show" identifier="toDetailSegue" id="3zh-7J-d4a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.99917727710000004" green="0.83478528259999996" blue="0.13947835559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ERM-Bi-6cv" secondAttribute="bottom" id="9HG-MM-ZAT"/>
+                            <constraint firstItem="ERM-Bi-6cv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jqG-c5-ngz"/>
+                            <constraint firstItem="ERM-Bi-6cv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m7W-HB-L5z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ERM-Bi-6cv" secondAttribute="trailing" id="soM-r2-yOs"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Vehicles" id="vXV-iG-LEJ"/>
+                    <navigationItem key="navigationItem" title="Vehicles" id="vXV-iG-LEJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mEm-4v-XnF">
+                            <connections>
+                                <action selector="onPlusTapped" destination="BYZ-38-t0r" id="Ya8-dL-59T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ERM-Bi-6cv" id="uIE-8z-knP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-717" y="1817"/>
+            <point key="canvasLocation" x="-1184" y="1823"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="u4T-jQ-9nc">
+            <objects>
+                <viewController id="d1s-ic-pyq" customClass="DetailViewController" customModule="Vehicle_Service_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dzk-nH-oYR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-a3-Kkd">
+                                <rect key="frame" x="112" y="103" width="190.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-r2-QmA">
+                                <rect key="frame" x="20" y="159" width="374" height="423"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGq-f7-ike">
+                                        <rect key="frame" x="170" y="0.0" width="34" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PurchaseDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6C-Yg-yGh">
+                                        <rect key="frame" x="133.5" y="49" width="107" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalMiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWw-YT-wLx">
+                                        <rect key="frame" x="148.5" y="98" width="77" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TirePSI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWv-Bz-Uka">
+                                        <rect key="frame" x="160" y="147" width="54" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MilesPerGallon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-DI-TnT">
+                                        <rect key="frame" x="130.5" y="196" width="113.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LatestGasPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="026-b5-8V4">
+                                        <rect key="frame" x="129.5" y="245" width="115.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastServiceDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF8-eb-Oag">
+                                        <rect key="frame" x="124.5" y="294" width="125" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MilesAtNextServiceDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpP-BI-Lsv">
+                                        <rect key="frame" x="95" y="343" width="184" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bw2-Yh-I41">
+                                        <rect key="frame" x="9.5" y="392" width="355" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUc-kW-5hy">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Choose Photo">
+                                                    <backgroundConfiguration key="background" strokeWidth="10">
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="79Z-fG-lLm"/>
+                                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="JfL-ID-ciz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-2A-DKz">
+                                                <rect key="frame" x="120" y="0.0" width="115" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Save Photo">
+                                                    <backgroundConfiguration key="background" strokeWidth="10">
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="UeF-3i-XYO"/>
+                                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="XAL-Pw-2HF"/>
+                                                    <action selector="saveImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="kzv-V9-juS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6L8-sQ-jGW">
+                                                <rect key="frame" x="240" y="0.0" width="115" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Fetch Photo">
+                                                    <backgroundConfiguration key="background" strokeWidth="10">
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="qQL-N2-ecI"/>
+                                                    <action selector="didTapPicButton" destination="d1s-ic-pyq" eventType="touchUpInside" id="f1z-SR-tGy"/>
+                                                    <action selector="fetchImageButtonPressed:" destination="d1s-ic-pyq" eventType="touchUpInside" id="E38-pj-EKm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-d5-g39">
+                                <rect key="frame" x="20" y="587" width="374" height="218"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P62-oG-2xn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5bP-r2-QmA" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="Fuh-Zd-a2T"/>
+                            <constraint firstItem="vXK-a3-Kkd" firstAttribute="top" secondItem="P62-oG-2xn" secondAttribute="top" constant="15" id="J1c-zM-lxj"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="bottom" secondItem="fwU-d5-g39" secondAttribute="bottom" constant="8" id="Qfh-ug-0WN"/>
+                            <constraint firstItem="5bP-r2-QmA" firstAttribute="top" secondItem="vXK-a3-Kkd" secondAttribute="bottom" constant="8" id="SjD-Qn-qoe"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="5bP-r2-QmA" secondAttribute="trailing" constant="20" id="ZjY-nb-IfH"/>
+                            <constraint firstItem="P62-oG-2xn" firstAttribute="trailing" secondItem="fwU-d5-g39" secondAttribute="trailing" constant="20" id="abE-JZ-LNP"/>
+                            <constraint firstItem="fwU-d5-g39" firstAttribute="top" secondItem="5bP-r2-QmA" secondAttribute="bottom" constant="5" id="fbV-VH-7MS"/>
+                            <constraint firstItem="fwU-d5-g39" firstAttribute="leading" secondItem="P62-oG-2xn" secondAttribute="leading" constant="20" id="kGm-Az-eKn"/>
+                            <constraint firstItem="vXK-a3-Kkd" firstAttribute="centerX" secondItem="dzk-nH-oYR" secondAttribute="centerX" id="qp7-gA-bLX"/>
+                            <constraint firstItem="fwU-d5-g39" firstAttribute="top" secondItem="vXK-a3-Kkd" secondAttribute="bottom" constant="436" id="wP2-4j-Xl8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YPQ-Te-p8L">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="BYc-xe-iqG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="fwU-d5-g39" id="NCI-PP-qum"/>
+                        <outlet property="lastServiceDateLabel" destination="sF8-eb-Oag" id="N7h-6n-8SH"/>
+                        <outlet property="latestGasPriceLabel" destination="026-b5-8V4" id="42R-MD-JTf"/>
+                        <outlet property="milesAtNextServiceDateLabel" destination="fpP-BI-Lsv" id="me7-oP-XgP"/>
+                        <outlet property="milesPerGallonLabel" destination="dbj-DI-TnT" id="Edl-DG-2wE"/>
+                        <outlet property="purchaseDateLabel" destination="m6C-Yg-yGh" id="xzj-eZ-8kj"/>
+                        <outlet property="tirePSILabel" destination="YWv-Bz-Uka" id="OOZ-5o-37p"/>
+                        <outlet property="titleLabel" destination="vXK-a3-Kkd" id="NUS-eR-qsl"/>
+                        <outlet property="totalMilesLabel" destination="PWw-YT-wLx" id="g4t-dG-uPL"/>
+                        <outlet property="vehiclePicButton" destination="zUc-kW-5hy" id="cfm-d4-5MU"/>
+                        <outlet property="yearLabel" destination="CGq-f7-ike" id="fCx-pp-tnV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tm3-0F-lcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-557.97101449275362" y="1822.7678571428571"/>
         </scene>
         <!--Add Vehicles-->
         <scene sceneID="FoC-nF-SRq">
             <objects>
-                <viewController id="neI-iq-Dql" sceneMemberID="viewController">
+                <viewController id="neI-iq-Dql" customClass="AddVehiclesViewController" customModule="Vehicle_Service_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4LB-fK-43h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L7w-ad-4BY">
-                                <rect key="frame" x="157" y="432.5" width="100.5" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PDL-Dj-skm">
+                                <rect key="frame" x="20" y="118" width="374" height="684"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G0-cO-AcI">
-                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="31"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Vehicle Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-pJ-hUx">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Vehicle Make and Model" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4D-V4-lEV">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Purchase Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMY-qf-6Va">
+                                        <rect key="frame" x="0.0" y="84" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Total Miles" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5PY-rs-bdb">
+                                        <rect key="frame" x="0.0" y="126" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Date of Last Service" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Jc-Oa-gqY">
+                                        <rect key="frame" x="0.0" y="168" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Haa-9x-eOZ">
+                                        <rect key="frame" x="0.0" y="210" width="374" height="275"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgK-Tp-xaP">
+                                                <rect key="frame" x="0.0" y="122" width="126" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Vehicle Picture">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapButton" destination="neI-iq-Dql" eventType="touchUpInside" id="s2c-oJ-EJW"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-mV-vZx">
+                                                <rect key="frame" x="134" y="0.0" width="240" height="275"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-no-b7c">
+                                        <rect key="frame" x="0.0" y="493" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Add Vehicle"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Enter">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="AddVehicle:" destination="CZY-bg-n05" eventType="touchUpInside" id="8SI-OD-LNr"/>
+                                            <action selector="enterTapped:" destination="neI-iq-Dql" eventType="touchUpInside" id="DE3-en-Bv4"/>
                                         </connections>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-rP-mby">
+                                        <rect key="frame" x="0.0" y="532" width="374" height="152"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="152" id="Lgd-v8-3qc"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pZ7-cS-C7U"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L7w-ad-4BY" firstAttribute="centerX" secondItem="4LB-fK-43h" secondAttribute="centerX" id="Akz-Tv-ZE2"/>
-                            <constraint firstItem="L7w-ad-4BY" firstAttribute="centerY" secondItem="4LB-fK-43h" secondAttribute="centerY" id="O5K-Tp-9Hv"/>
+                            <constraint firstItem="PDL-Dj-skm" firstAttribute="top" secondItem="pZ7-cS-C7U" secondAttribute="top" constant="30" id="9vW-QT-VAI"/>
+                            <constraint firstItem="PDL-Dj-skm" firstAttribute="leading" secondItem="pZ7-cS-C7U" secondAttribute="leading" constant="20" id="UsV-Dl-3LQ"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="trailing" secondItem="PDL-Dj-skm" secondAttribute="trailing" constant="20" id="dfV-vY-Upg"/>
+                            <constraint firstItem="pZ7-cS-C7U" firstAttribute="bottom" secondItem="PDL-Dj-skm" secondAttribute="bottom" constant="11" id="seG-j5-z2L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Vehicles" id="1jP-30-1g2"/>
+                    <connections>
+                        <outlet property="button" destination="tgK-Tp-xaP" id="Rgb-fF-hBP"/>
+                        <outlet property="imageView" destination="vBc-mV-vZx" id="qHc-zP-N9Z"/>
+                        <outlet property="textView" destination="8a4-rP-mby" id="R00-Kg-OG7"/>
+                        <outlet property="vLastService" destination="5Jc-Oa-gqY" id="9X5-tf-FRT"/>
+                        <outlet property="vMakeModel" destination="E4D-V4-lEV" id="Rp4-qt-G75"/>
+                        <outlet property="vPurchaseDate" destination="sMY-qf-6Va" id="h49-kv-7Ay"/>
+                        <outlet property="vTotalMiles" destination="5PY-rs-bdb" id="eRN-Qy-MAz"/>
+                        <outlet property="vYear" destination="ueo-pJ-hUx" id="YrK-t4-9eY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OT-g8-us2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="CZY-bg-n05" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="210.1449275362319" y="1827.4553571428571"/>
         </scene>
         <!--Settings-->
         <scene sceneID="p8S-pk-cf5">
             <objects>
-                <viewController id="1NU-Bi-tQj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsVC" id="1NU-Bi-tQj" customClass="SettingsViewController" customModule="Vehicle_Service_Tracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aOU-9W-KT4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,11 +475,17 @@
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

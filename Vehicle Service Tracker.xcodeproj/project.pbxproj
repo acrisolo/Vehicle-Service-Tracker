@@ -7,23 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3101BFA27BAC578006FBEAC /* dateKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3101BF927BAC578006FBEAC /* dateKeyboard.swift */; };
+		C3314C6727C3086E00CD0980 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3314C6627C3086E00CD0980 /* DetailViewController.swift */; };
+		C380530427F2CA3B0007FB31 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380530327F2CA3B0007FB31 /* DataBaseHelper.swift */; };
+		C3967E7727AF7A51004F4F9F /* dateWheelKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7627AF7A51004F4F9F /* dateWheelKeyboard.swift */; };
+		C3967E7927AF800B004F4F9F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7827AF800B004F4F9F /* SettingsViewController.swift */; };
+		C3967E7B27AF873D004F4F9F /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */; };
 		C3B67F9B27962F64002191A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B67F9A27962F64002191A7 /* AppDelegate.swift */; };
 		C3B67F9D27962F64002191A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B67F9C27962F64002191A7 /* SceneDelegate.swift */; };
-		C3B67F9F27962F64002191A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B67F9E27962F64002191A7 /* ViewController.swift */; };
+		C3B67F9F27962F64002191A7 /* AddVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B67F9E27962F64002191A7 /* AddVehiclesViewController.swift */; };
 		C3B67FA227962F64002191A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B67FA027962F64002191A7 /* Main.storyboard */; };
 		C3B67FA427962F65002191A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B67FA327962F65002191A7 /* Assets.xcassets */; };
 		C3B67FA727962F65002191A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B67FA527962F65002191A7 /* LaunchScreen.storyboard */; };
+		C3C03EBE27B85FD300F747BD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EBD27B85FD300F747BD /* CustomCell.swift */; };
+		C3C03EEF27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */; };
+		C3C03EF027B8A45E00F747BD /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */; };
+		C3C03EF127B8A45E00F747BD /* Vehicle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */; };
+		C3C03EF227B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3C03EED27B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld */; };
+		C3D86EC827B186090075F07E /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86EC727B186090075F07E /* VideoDetailView.swift */; };
+		C3D86ECA27B186130075F07E /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86EC927B186130075F07E /* Video.swift */; };
+		C3D86ECC27B18D420075F07E /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86ECB27B18D420075F07E /* VideoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3101BF927BAC578006FBEAC /* dateKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateKeyboard.swift; sourceTree = "<group>"; };
+		C3314C6627C3086E00CD0980 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C380530327F2CA3B0007FB31 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
+		C3967E7627AF7A51004F4F9F /* dateWheelKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateWheelKeyboard.swift; sourceTree = "<group>"; };
+		C3967E7827AF800B004F4F9F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		C3B67F9727962F64002191A7 /* Vehicle Service Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vehicle Service Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B67F9A27962F64002191A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B67F9C27962F64002191A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3B67F9E27962F64002191A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3B67F9E27962F64002191A7 /* AddVehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehiclesViewController.swift; sourceTree = "<group>"; };
 		C3B67FA127962F64002191A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3B67FA327962F65002191A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3B67FA627962F65002191A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3B67FA827962F65002191A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3C03EBD27B85FD300F747BD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C3C03EEE27B8A45E00F747BD /* savingData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = savingData.xcdatamodel; sourceTree = "<group>"; };
+		C3D86EC727B186090075F07E /* VideoDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
+		C3D86EC927B186130075F07E /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		C3D86ECB27B18D420075F07E /* VideoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +85,52 @@
 			isa = PBXGroup;
 			children = (
 				C3B67F9A27962F64002191A7 /* AppDelegate.swift */,
+				C3C03EF327B8A47600F747BD /* SaveData */,
 				C3B67F9C27962F64002191A7 /* SceneDelegate.swift */,
-				C3B67F9E27962F64002191A7 /* ViewController.swift */,
+				C3C03EBF27B867D300F747BD /* Vehicles Tab */,
+				C3B67F9E27962F64002191A7 /* AddVehiclesViewController.swift */,
+				C3967E7827AF800B004F4F9F /* SettingsViewController.swift */,
+				C3967E7627AF7A51004F4F9F /* dateWheelKeyboard.swift */,
 				C3B67FA027962F64002191A7 /* Main.storyboard */,
 				C3B67FA327962F65002191A7 /* Assets.xcassets */,
 				C3B67FA527962F65002191A7 /* LaunchScreen.storyboard */,
 				C3B67FA827962F65002191A7 /* Info.plist */,
+				C3C03EC027B8680400F747BD /* SwiftUI List */,
 			);
 			path = "Vehicle Service Tracker";
+			sourceTree = "<group>";
+		};
+		C3C03EBF27B867D300F747BD /* Vehicles Tab */ = {
+			isa = PBXGroup;
+			children = (
+				C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */,
+				C3314C6627C3086E00CD0980 /* DetailViewController.swift */,
+				C3C03EBD27B85FD300F747BD /* CustomCell.swift */,
+				C3101BF927BAC578006FBEAC /* dateKeyboard.swift */,
+				C380530327F2CA3B0007FB31 /* DataBaseHelper.swift */,
+			);
+			path = "Vehicles Tab";
+			sourceTree = "<group>";
+		};
+		C3C03EC027B8680400F747BD /* SwiftUI List */ = {
+			isa = PBXGroup;
+			children = (
+				C3D86ECB27B18D420075F07E /* VideoListView.swift */,
+				C3D86EC727B186090075F07E /* VideoDetailView.swift */,
+				C3D86EC927B186130075F07E /* Video.swift */,
+			);
+			path = "SwiftUI List";
+			sourceTree = "<group>";
+		};
+		C3C03EF327B8A47600F747BD /* SaveData */ = {
+			isa = PBXGroup;
+			children = (
+				C3C03EED27B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld */,
+				C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */,
+				C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */,
+				C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */,
+			);
+			path = SaveData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +204,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3B67F9F27962F64002191A7 /* ViewController.swift in Sources */,
+				C380530427F2CA3B0007FB31 /* DataBaseHelper.swift in Sources */,
+				C3D86EC827B186090075F07E /* VideoDetailView.swift in Sources */,
+				C3C03EF027B8A45E00F747BD /* PersistenceService.swift in Sources */,
+				C3B67F9F27962F64002191A7 /* AddVehiclesViewController.swift in Sources */,
+				C3C03EBE27B85FD300F747BD /* CustomCell.swift in Sources */,
+				C3967E7B27AF873D004F4F9F /* VehiclesViewController.swift in Sources */,
 				C3B67F9B27962F64002191A7 /* AppDelegate.swift in Sources */,
+				C3967E7727AF7A51004F4F9F /* dateWheelKeyboard.swift in Sources */,
+				C3314C6727C3086E00CD0980 /* DetailViewController.swift in Sources */,
+				C3C03EEF27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift in Sources */,
+				C3C03EF127B8A45E00F747BD /* Vehicle+CoreDataClass.swift in Sources */,
+				C3C03EF227B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld in Sources */,
+				C3D86ECC27B18D420075F07E /* VideoListView.swift in Sources */,
+				C3D86ECA27B186130075F07E /* Video.swift in Sources */,
+				C3101BFA27BAC578006FBEAC /* dateKeyboard.swift in Sources */,
+				C3967E7927AF800B004F4F9F /* SettingsViewController.swift in Sources */,
 				C3B67F9D27962F64002191A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +444,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3C03EED27B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3C03EEE27B8A45E00F747BD /* savingData.xcdatamodel */,
+			);
+			currentVersion = C3C03EEE27B8A45E00F747BD /* savingData.xcdatamodel */;
+			path = "Vehicle Service Tracker.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C3B67F8F27962F64002191A7 /* Project object */;
 }
