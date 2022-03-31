@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Vehicle" representedClassName="Vehicle" syncable="YES">
-        <attribute name="carImage" optional="YES" attributeType="Binary"/>
+        <attribute name="carPic" optional="YES" attributeType="Binary"/>
         <attribute name="lastServiceDate" optional="YES" attributeType="String"/>
         <attribute name="makeModel" optional="YES" attributeType="String"/>
         <attribute name="purchaseDate" optional="YES" attributeType="String"/>
