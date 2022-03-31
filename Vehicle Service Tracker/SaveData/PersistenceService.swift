@@ -10,7 +10,7 @@ import CoreData
 
 class PersistenceService {
     // MARK: - Core Data stack
-
+//test
     private init(){}
     
     static var context: NSManagedObjectContext {
