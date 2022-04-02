@@ -20,7 +20,7 @@ class DetailViewController: UIViewController {
     var latestGasPrice: Double?
     var carLastServiceDate: String?
     var milesAtServiceDate: Double?
-    var carImage: Data?
+   // var carImage: Data?
     
     // MARK: - IBOutlets section
     
@@ -56,9 +56,6 @@ class DetailViewController: UIViewController {
         if let carLastServiceDate = carLastServiceDate {
             lastServiceDateLabel.text = "Last Service Date: \(carLastServiceDate)"
         }
-        if let carImage = carImage {
-            imageView.image = UIImage(data: DataBaseHelper.shareInstance.fetchImage()[0].img!)
-        }
     }
     
     override func viewDidLoad() {
@@ -86,7 +83,7 @@ class DetailViewController: UIViewController {
     @IBAction func fetchImageButtonPressed(_ sender: UIButton) {
         
         let arr = DataBaseHelper.shareInstance.fetchImage()
-        imageView.image = UIImage(data: arr[0].img!)
+        imageView.image = UIImage(data: arr.last!.img!)
     }
 }
 

@@ -11,7 +11,7 @@ import CoreData
 class DataBaseHelper {
     
     static let shareInstance = DataBaseHelper()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = AppDelegate.persistentContainer.viewContext
     
     func saveImage(data: Data) {
         let imageInstance = Vimage(context: context)

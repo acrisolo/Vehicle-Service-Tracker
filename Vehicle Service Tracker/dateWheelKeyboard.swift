@@ -16,8 +16,8 @@ extension AddVehiclesViewController {
         toolbar1.sizeToFit()
         toolbar2.sizeToFit()
         if #available(iOS 13.4, *) {
-           datePickerPurchase.preferredDatePickerStyle = .wheels
-           datePickerService.preferredDatePickerStyle = .wheels
+            datePickerPurchase.preferredDatePickerStyle = .wheels
+            datePickerService.preferredDatePickerStyle = .wheels
         }
         //bar button
         let doneButton1 = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed1))
@@ -26,11 +26,11 @@ extension AddVehiclesViewController {
         toolbar2.setItems([doneButton2], animated: true)
         // assign toolbar to keyboard
         if ((vPurchaseDate != nil) || vLastService != nil) {
-        vPurchaseDate.inputAccessoryView = toolbar1
-        vLastService.inputAccessoryView = toolbar2
-        //assign date picker to the text field
-        vPurchaseDate.inputView = datePickerPurchase
-        vLastService.inputView = datePickerService
+            vPurchaseDate.inputAccessoryView = toolbar1
+            vLastService.inputAccessoryView = toolbar2
+            //assign date picker to the text field
+            vPurchaseDate.inputView = datePickerPurchase
+            vLastService.inputView = datePickerService
         }
         
         //date picker mode just showing month day year
@@ -53,7 +53,7 @@ extension AddVehiclesViewController {
         let formatter2 = DateFormatter()
         formatter2.dateStyle = .medium
         formatter2.timeStyle = .none
-
+        
         vLastService.text = formatter2.string(from: datePickerService.date)
         self.view.endEditing(true)
     }

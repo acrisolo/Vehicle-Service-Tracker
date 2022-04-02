@@ -14,7 +14,7 @@ class VehiclesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var vehicles = [Vehicle]() //new
+    var vehicles = [Vimage]() //new
     
     let datePickerPurchase = UIDatePicker()
     
@@ -29,10 +29,10 @@ class VehiclesViewController: UIViewController {
         
         //   createDatePicker()
         
-        let fetchRequest: NSFetchRequest<Vehicle> = Vehicle.fetchRequest() //new
+        let fetchRequest: NSFetchRequest<Vimage> = Vimage.fetchRequest() //new
         
         do {
-            let vehicles = try PersistenceService.context.fetch(fetchRequest)
+            let vehicles = try AppDelegate.context.fetch(fetchRequest)
             self.vehicles = vehicles
             self.tableView.reloadData()
         } catch {} //new
@@ -68,7 +68,7 @@ class VehiclesViewController: UIViewController {
             print(vPurchaseDate)
             print(vTotalMiles)
             print(vLastService)
-            let vehicleSaved = Vehicle(context: PersistenceService.context)
+            let vehicleSaved = Vimage(context: AppDelegate.context)
             vehicleSaved.makeModel = vehicle
             //vehicleSaved.year = Int16(year)! <- if using int16
             vehicleSaved.year = year
@@ -76,7 +76,7 @@ class VehiclesViewController: UIViewController {
             //vehicleSaved.totalMiles = Int16(vTotalMiles)! <- if using int16
             vehicleSaved.totalMiles = vTotalMiles
             vehicleSaved.lastServiceDate = vLastService
-            PersistenceService.saveContext()
+            AppDelegate.saveContext()
             self.vehicles.append(vehicleSaved)
             self.tableView.reloadData()
         }
@@ -118,7 +118,7 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomCell
         let specificMakeModel = vehicles[indexPath.row].makeModel
-        cell.carImage.image = UIImage(named: specificMakeModel!) //changed to !
+        // cell.carImage.image = UIImage(named: specificMakeModel!) //changed to !
         cell.carLabel.text = specificMakeModel?.capitalized
         
         let vehicleYear = vehicles[indexPath.row].year

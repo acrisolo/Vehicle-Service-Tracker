@@ -65,6 +65,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3AC130727F8FFF40018452F /* Depreciated CoreData Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C3101BF927BAC578006FBEAC /* dateKeyboard.swift */,
+				C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */,
+				C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */,
+				C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */,
+			);
+			path = "Depreciated CoreData Storage";
+			sourceTree = "<group>";
+		};
 		C3B67F8E27962F64002191A7 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +106,7 @@
 				C3B67FA327962F65002191A7 /* Assets.xcassets */,
 				C3B67FA527962F65002191A7 /* LaunchScreen.storyboard */,
 				C3B67FA827962F65002191A7 /* Info.plist */,
+				C3AC130727F8FFF40018452F /* Depreciated CoreData Storage */,
 				C3C03EC027B8680400F747BD /* SwiftUI List */,
 			);
 			path = "Vehicle Service Tracker";
@@ -106,7 +118,6 @@
 				C3967E7A27AF873D004F4F9F /* VehiclesViewController.swift */,
 				C3314C6627C3086E00CD0980 /* DetailViewController.swift */,
 				C3C03EBD27B85FD300F747BD /* CustomCell.swift */,
-				C3101BF927BAC578006FBEAC /* dateKeyboard.swift */,
 				C380530327F2CA3B0007FB31 /* DataBaseHelper.swift */,
 			);
 			path = "Vehicles Tab";
@@ -126,9 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				C3C03EED27B8A45E00F747BD /* Vehicle Service Tracker.xcdatamodeld */,
-				C3C03EEB27B8A45E00F747BD /* PersistenceService.swift */,
-				C3C03EEA27B8A45E00F747BD /* Vehicle+CoreDataProperties.swift */,
-				C3C03EEC27B8A45E00F747BD /* Vehicle+CoreDataClass.swift */,
 			);
 			path = SaveData;
 			sourceTree = "<group>";
