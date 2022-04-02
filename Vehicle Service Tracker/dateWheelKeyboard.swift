@@ -3,7 +3,7 @@
 //  Vehicle Service Tracker
 //
 //  Created by Alan Crisologo on 2/5/22.
-//
+//  Adapted from PlanetVeracity on 2/2/20.
 
 import Foundation
 import UIKit
