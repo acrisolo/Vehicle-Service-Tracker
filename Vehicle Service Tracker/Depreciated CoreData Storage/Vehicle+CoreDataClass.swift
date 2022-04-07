@@ -6,10 +6,10 @@
 //
 //
 
-import Foundation
-import CoreData
-
-@objc(Vehicle)
-public class Vehicle: NSManagedObject {
-
-}
+//import Foundation
+//import CoreData
+//
+//@objc(Vehicle)
+//public class Vehicle: NSManagedObject {
+//
+//}
