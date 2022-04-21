@@ -48,7 +48,7 @@ class VehiclesViewController: UIViewController {
         }
         alert.addTextField{ (textField) in
             textField.placeholder = "Purchase Date"
-            //input dateKeyboard
+            //input dateKeyboard in future
         }
         alert.addTextField{ (textField) in
             textField.placeholder = "Total Miles"
